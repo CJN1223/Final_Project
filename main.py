@@ -14,14 +14,14 @@ while play_again.lower() == "yes": # Outer loop to restart the game
 
     # Validate difficulty input
     difficulty = input("Enter Easy, Medium, or Hard: ")
-    while difficulty not in ["Easy", "Medium", "Hard"]:
+    while difficulty.lower() not in ["easy", "medium", "hard"]:
         print("Invalid input. Please enter Easy, Medium, or Hard.")
         difficulty = input("Enter Easy, Medium, or Hard: ")
 
     # Set the maximum number based on the chosen difficulty
-    if difficulty == "Easy":
+    if difficulty.lower() == "easy":
         max_num = 100
-    elif difficulty == "Medium":
+    elif difficulty.lower() == "medium":
         max_num = 500
     else:
         max_num = 1000
@@ -51,5 +51,5 @@ while play_again.lower() == "yes": # Outer loop to restart the game
     
     # Ask the user if they want to replay
     play_again = input("Do you want to play again? (Yes/No): ")
-    while play_again.lower() not in ["yes", "No"]:
+    while play_again.lower() not in ["yes", "no"]:
         play_again = input("Invalid input. Please enter Yes or No: ")
